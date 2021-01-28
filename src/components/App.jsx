@@ -21,6 +21,17 @@ function App() {
     });
   }
 
+  if (notes.length === 0) {
+    for (var i = 0; i < 3; i++) {
+      var people = ["Suzie", "Jimmy", "Sal"];
+      var places = ["school", "daycare", "work"];
+      addNote({
+        title: "Note " + (i + 1),
+        content: "Pickup " + people[i] + " from " + places[i] + ".",
+      });
+    }
+  }
+
   return (
     <div>
       <Header />
